@@ -19,20 +19,34 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Jonah Offman
-email: joffman1@jhu.edu
+# email: joffman1@jhu.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Hello! I am currently a senior at Johns Hopkins University in Baltimore, MD.
+  I am studying Mechanical Engineering and created this site to showcase my 
+  experiences, projects, skills, and interests. Thanks for stopping by!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
-
+# twitter_username: jekyllrb
+# github_username:  jekyll
+logo:  /assets/headshotsq.jpg
+author: 
+  name: <Jonah> <Offman>
+  email: <joffman1@jhu.edu>
 # Build settings
-theme: minima
+menu:
+  - title:             Resume
+    url:               /resume/
+  - title:             Experiences
+    url:               /experience/
+  - title:             Projects
+    url:               /projects/
+  - title:             About Me 
+    url:               /about/
+
+remote_theme: hydecorp/hydejack@v9.0.5
 plugins:
   - jekyll-feed
+  - jekyll-include-cache
 
 # Exclude from processing.
 # The following items will not be processed, by default.
