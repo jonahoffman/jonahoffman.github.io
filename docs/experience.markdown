@@ -1,5 +1,5 @@
 ---
 layout: page
-title: Experience
+title: Experiences
 permalink: /experience/
 ---
