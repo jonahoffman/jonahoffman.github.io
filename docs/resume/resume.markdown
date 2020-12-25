@@ -5,4 +5,4 @@ permalink: /resume/
 ---
 
 
-<embed src="Jonah Offman Resume.pdf" width="800px" height="2100px" />
+<embed src="Jonah Offman Resume.pdf#view=FitH" width="800px" height="2100px" />
