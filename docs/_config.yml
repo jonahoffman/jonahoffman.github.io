@@ -29,6 +29,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll
 logo:  /assets/headshotsq.jpg
+accent_image: /assets/gearsdark.jpg
+accent_color: rgb(0,45,114)
 author: 
   name: <Jonah> <Offman>
   email: <joffman1@jhu.edu>
