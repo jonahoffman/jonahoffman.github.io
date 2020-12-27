@@ -162,6 +162,10 @@ I created this site both as a way to showcase the work I've done over the years 
 
 ## Projects
 
+| pic w/ description | more of that |
+| another one | even more |
+| as many as needed | just making tables baby |
+
 ## Skills 
 • Fluent in **French**  
 • Skilled in **CAD** (experience in CREO and SolidWorks)    
