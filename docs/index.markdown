@@ -39,7 +39,7 @@ I created this site both as a way to showcase the work I've done over the years 
 - Pi Tau Sigma Mechanical Engineering Honor Society
 - Charles C. Diggs Scholarship Recipient
 - Dean’s List (Fall 2017 - Spring 2019)
-- 2020 CoSIDA Academic All-District Team
+- 2020 CoSIDA Academic All-District Team (Baseball)
 - Centennial Conference Academic Honor Roll (2019 - 2020)  
 
 ---
@@ -160,12 +160,6 @@ I created this site both as a way to showcase the work I've done over the years 
 
 ---
 
-## Projects
-
-| pic w/ description | more of that |
-| another one | even more |
-| as many as needed | just making tables baby |
-
 ## Skills 
 • Fluent in **French**  
 • Skilled in **CAD** (experience in CREO and SolidWorks)    
@@ -173,3 +167,14 @@ I created this site both as a way to showcase the work I've done over the years 
 • **Manufacturing** and **machining** processes (3D Printing, Laser Cutting, Wire EDM, Lathe, Mill, etc.)    
 • Proficient in `MATLAB` and `Python`    
 • Excellent with **Microsoft Office** and **G suite**    
+
+--- 
+## Projects
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

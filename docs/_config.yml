@@ -40,10 +40,10 @@ menu:
     url:               /resume/
   - title:             Experiences
     url:               /#experiences
-  - title:             Projects
-    url:               /#projects
   - title:             Skills 
     url:               /#skills
+  - title:             Projects
+    url:               /#projects
 
 remote_theme: hydecorp/hydejack@v9.0.5
 plugins:
