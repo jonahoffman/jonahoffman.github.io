@@ -3,3 +3,5 @@ layout: post
 title: Machine Learning - Startup Projections
 date: 2020-12-28 11:53:32 -0500
 ---
+
+This project was done for a probability and statistics course, but my group and I wanted to use machine learning (Sklearn) techniques to do our analysis. For this project, we took a massive dataset of ~10000 startup ventures and tried to determine what factors could best predict success or failure. 
