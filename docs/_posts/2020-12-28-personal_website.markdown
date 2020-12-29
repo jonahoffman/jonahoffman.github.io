@@ -9,3 +9,7 @@ After finishing my graduate school applications, I wanted to spend the winter br
 Building this site was (and continues to be) a great experience to learning HTML and Git version control, while also showcasing the projects and experiences I have had over the years. I will continue to update the site to improve its functionality and aesthetics and as I continue to learn more HTML, CSS, and JavaScript (thanks to [freecodecamp.org](freecodecamp.org)).
 
 Check out the repository on Github [here](https://github.com/joffman27/joffman27.github.io).
+
+
+
+[Back to Projects](/#projects)

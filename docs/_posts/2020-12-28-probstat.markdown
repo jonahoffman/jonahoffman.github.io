@@ -5,3 +5,165 @@ date: 2020-12-28 11:53:32 -0500
 ---
 
 This project was done for a probability and statistics course, but my group and I wanted to use machine learning (Sklearn) techniques to do our analysis. For this project, we took a massive dataset of ~10000 startup ventures and tried to determine what factors could best predict success or failure. 
+
+I had previusly been introduced to to machine learning techniques during a winter course called Scientific Programming in Python, so I was excited to apply it to a real life problem. Our code was written to look at companies 1, 5, and 10 years after their inception and see what factors could best predict startup longevitiy, and output the result as a confusion matrix. The project was primarily written in Jupyter Notebooks, since as a novice coder I preferred the ability to run code blocks individually. 
+
+The following is our poster presentation:
+
+<iframe src="https://drive.google.com/file/d/14Y2GcatxBn0Fi-tGm3cW1nHamxb5zGL6/preview" width="100%" height="500"></iframe>
+
+The following is the ten-year prediction code:
+
+```python 
+# Import Relevant Libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt 
+import cleanData
+# import xgboost as xgb
+from IPython.display import display
+from sklearn.preprocessing import scale
+from sklearn.model_selection import train_test_split
+
+data = cleanData.tenyeardata()
+print(data)
+
+import datetime
+dates = pd.to_datetime(data.first_funding_at)
+years = dates.dt.year
+data['first_funding_at'] = (years - 2004)
+
+dates1 = pd.to_datetime(data.last_funding_at)
+years1 = dates1.dt.year
+data['last_funding_at'] = (years1 - 2004)
+
+data.head()
+
+# Number of Markets and Regions and their types
+markets = data.market.value_counts()
+print(markets)
+regions = data.region.value_counts()
+print(regions)
+
+array1 = ['Software', 'Biotechnology', 'Health Care', 'Hardware + Software', 'Mobile']
+array2 = ['SF Bay Area', 'Boston', 'New York City', 'San Diego', 'Los Angeles']
+
+data1 = data.loc[data['market'].isin(array1)]
+data2 = data1.loc[data['region'].isin(array2)]
+
+x_all = data2.drop(['name','status','founded_year'],1)
+y_all = data2['status']
+
+def preprocess_features(X): 
+    ''' 
+    Preprocesses the data and converts categorical variables
+    into 'dummy variables' for regression.
+    '''
+    # Initialize new output DataFrame
+    output = pd.DataFrame(index = X.index)
+    
+    # Investigate each feature column for the data
+    for col, col_data in X.iteritems():
+        
+        if col_data.dtype == object: 
+            col_data = pd.get_dummies(col_data, prefix = col)
+            
+        # Collect the revised columns
+        output = output.join(col_data)
+        
+    return output 
+
+x_all = preprocess_features(x_all)
+x_all.head()
+
+# Scale Data
+
+# 'region_Boston','region_Los Angeles','region_New York City','region_SF Bay Area','region_San Diego',
+# 'market_Biotechnology','market_Hardware + Software','market_Health Care','market_Mobile','market_Software',
+
+cols = ['funding_total_usd','funding_rounds','first_funding_at','last_funding_at']
+for col in cols:
+    x_all[col] = scale(x_all[col])
+
+x_all.head()
+
+# Train test split
+x_train, x_test, y_train, y_test = train_test_split(x_all, y_all, test_size = 0.5, random_state = 2, stratify = y_all)
+
+
+from sklearn.svm import SVC
+from sklearn.linear_model import LogisticRegression
+
+# Fit Models to Training Data
+
+linReg_Model = LogisticRegression(random_state = 42)
+linReg_Model.fit(x_train, y_train)
+
+SVC_Model = SVC(kernel = 'poly')
+SVC_Model.fit(x_train, y_train)
+
+
+from sklearn.metrics import classification_report, confusion_matrix
+import itertools
+
+
+def plot_confusion_matrix(cm, classes,
+                          normalize=False,
+                          title='Confusion matrix',
+                          cmap=plt.cm.Blues):
+    """
+    This function prints and plots the confusion matrix.
+    Normalization can be applied by setting `normalize=True`.
+    """
+    if normalize:
+        cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
+        print("Normalized confusion matrix")
+    else:
+        print('Confusion matrix, without normalization')
+
+    print(cm)
+
+    plt.imshow(cm, interpolation='nearest', cmap=cmap)
+    plt.title(title)
+    plt.colorbar()
+    tick_marks = np.arange(len(classes))
+    plt.xticks(tick_marks, classes, rotation=45)
+    plt.yticks(tick_marks, classes)
+
+    fmt = '.2f' if normalize else 'd'
+    thresh = cm.max() / 2.
+    for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
+        plt.text(j, i, format(cm[i, j], fmt),
+                 horizontalalignment="center",
+                 color="white" if cm[i, j] > thresh else "black")
+
+    plt.tight_layout()
+    plt.ylabel('True label')
+    plt.xlabel('Predicted label')
+
+# Run Model on Test Data
+y_predict_1 = linReg_Model.predict(x_test)
+y_predict_2 = SVC_Model.predict(x_test)
+
+cnf_matrix_1 = confusion_matrix(y_test, y_predict_1)
+cnf_matrix_2 = confusion_matrix(y_test, y_predict_2)
+print(y_predict_1)
+
+plt.figure()
+plot_confusion_matrix(cnf_matrix_1, classes = ['acquired','closed','operating'], normalize = False)
+plt.title('10 Year Data Confusion Matrix')
+plt.show()
+
+plt.figure()
+plot_confusion_matrix(cnf_matrix_2, classes = ['acquired','closed','operating'], normalize = False)
+plt.show()
+
+#Test Accuracy
+print("Test accuracy for Lin Reg:", accuracy_score(y_test, y_predict_1))
+print("Test accuracy for SVC:", accuracy_score(y_test, y_predict_2))
+
+print(classification_report(y_test, y_predict_1))
+```
+
+
+[Back to Projects](/#projects)

@@ -3,3 +3,15 @@ layout: post
 title: CAD & Mechanics Based Design - Crane
 date: 2020-12-28 11:53:32 -0500
 ---
+
+For this project, our group of two was given a specific set of materials (mainly acrylic, screws, and rope) and told to build a device that could overhang a ledge and lift a 5 lb weight 2 inches off the ground as quickly as possible. 
+
+Our group's design used a level system, taking advantage of the width of the acrylic piece so that the weight would be lifted simply by the rotation of the "crane arm." While this design worked very well and lifted the weight almost instantaneously, it was banned for future generations of students for not working enough like an actual crane. 
+
+This is a CAD drawing of the crane assembly: 
+
+![](/assets/img/blog/mbd-asm.jpg)
+
+
+
+[Back to Projects](/#projects)

@@ -1,5 +1,311 @@
 ---
 layout: post
-title: Electronics - Automatic Strike Zone
+title: Electronics - Automatic Strike Zone 
 date: 2020-12-28 11:53:32 -0500
 ---
+
+In this project, our group designed an autonomous strike zone with Arduinos for baseball pitchers to determine approximate pitch velocity and pitcher accuracy and then relay it back to the pitcher. 
+
+Since this project was completed during COVID-19, the project was completed across various locations and was not able to be assembled. However, the individual components were all built and tested and worked well. Below is rough sketches for the finished project, as well as code for each of the individual components. These include: RF69 transceivers to transmit data, IR emitters/detectors to determine pitch velocity, shock sensors to determine where the ball hit, and a stepper motor to clear any loose balls away from the area. 
+
+The following are sketches of the autonomous strike zone: 
+
+![](/assets/img/blog/rsa-draw.jpg)
+
+The following is code for the RF69 transceivers: 
+
+**Receiver**:
+```c
+#include <SPI.h>
+#include <RH_RF69.h>
+#include <Adafruit.SSD1306.h>
+#include <Wire.h>
+
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+#define OLED_RESET    -1
+
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET); 
+RH_RF69 myTrans2(9, 3); //create transceiver 2 instance with CSpin = 9 and INTpin = 3
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600); //initialize serial output at 9600 baud
+  pinMode(6, OUTPUT); //set transceiver 2 RST pin as output
+  digitalWrite(6, LOW); //set transceiver 2 RST pin LOW
+
+  digitalWrite(6, HIGH); //set transceiver 2 RST pin HIGH
+  delay(10); // let pins stay high for 10 ms 
+  digitalWrite(6, LOW); //set transceiver 2 RST pin LOW
+  delay(10); //pins set back to low for 10 ms
+
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+  display.clearDisplay();
+  display.setTextSize(2); 
+  display.setTextColor(WHITE); 
+  
+  myTrans2.init(); //initialize transceiver 2
+
+  myTrans2.setFrequency(434); //set transceiver 2 frequency to 434MHz (specified on device)
+
+  myTrans2.setTxPower(17,true); //set transceiver 2 power level to between 14 and 20 (chose 17)
+}
+
+void loop() {
+  float velocity; 
+  // put your main code here, to run repeatedly:
+    //Check if second transceiver has received something using .available() method
+  //If it has, read it, and print it to Serial Monitor: 
+  uint8_t buf[RH_RF69_MAX_MESSAGE_LEN];
+  uint8_t len = sizeof(buf);
+  if (myTrans2.available()) {
+    if (myTrans2.recv(buf, &len)) {
+      //buf[len] = 0;
+      Serial.print("Received: ");
+      //Serial.println((char*)buf);
+      // Serial.println(float*)buf);
+      velocity = (float*)buf ; 
+      delay(1000);
+    }
+  } 
+  display.print("Velocity:");
+  display.println(velocity); 
+  if (velocity < 85.0) {
+    display.println("yikes :( ");
+  }
+  display.display();
+}
+```
+**Sender**:
+
+```c
+#include <SPI.h>
+#include <RH_RF69.h>
+
+RH_RF69 myTrans1(9, 3); //create transceiver 1 instance with CSpin = 9 and INTpin = 3
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600); //initialize serial output at 9600 baud
+  pinMode(6, OUTPUT); //set transceiver 1 RST pin as output
+  digitalWrite(6, LOW); //set transceiver 1 RST pin LOW
+
+  digitalWrite(6, HIGH); //set transceiver 1 RST pin HIGH
+  delay(10); // let pins stay high for 10 ms 
+  digitalWrite(6, LOW); //set transceiver 1 RST pin LOW
+  delay(10); //pins set back to low for 10 ms
+
+  myTrans1.init(); //initialize transceiver 1
+
+  myTrans1.setFrequency(434); //set transceiver 1 frequency to 434MHz (specified on device)
+
+  myTrans1.setTxPower(17,true); //set transceiver 1 power level to between 14 and 20 (chose 17)
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  float velocity; // Assume calculated from IR emitter
+  uint8_t velo[] = velocity;
+  myTrans1.send(velo, sizeof(velo)); 
+  myTrans1.waitPacketSent(); 
+}
+```
+
+The following is code for the IR emitters/detectors: 
+
+```c
+//RSA StrikeZone Project
+//Code for Impact/Velocity Detection
+
+bool hit; // define a variable to keep track if an impact occurred
+int countVelo; //define a counter to tell if the IR had detected an object
+int countShock; //define a counter to tell if the vibration sensor had detected an impact
+
+unsigned long startTime; //define a varible to hold the start time
+unsigned long endTime; //define a varible to hold the end time
+unsigned long totTime; //define a varible to hold the total time
+
+void setup() {
+  pinMode(A0, INPUT); //set up AO as an input to read the vibration sensor output
+  pinMode(A1, INPUT); //set up A1 as an input to read the IR sensor output
+  Serial.begin(9600); //set up the Serial monitor for printing
+}
+
+void loop(){
+  //determine if an object has been detected by the IR sensor
+  if (analogRead(A1) < 900 && countVelo == 0) {
+    startTime = millis(); //if it has been detected, start the timer
+    countVelo = countVelo + 1; //increase the count of the detections
+  }
+
+  //determine if an object has impacted the vibration sensor after it 
+  //has been detected by the IR sensor
+  if (analogRead(A0) > 460 && countShock == 0 && countVelo == 1) {
+    endTime = millis(); //if it has been detected, stop the timer
+    totTime = endTime - startTime; //calculate the time elapsed
+    hit = true; //update that the zone has been hit
+    countShock = countShock + 1; //increase the count of the hit
+  }
+
+  //if the zone was hit, begin to output desired measurements
+  if (hit) {
+    float velo = (10 / (float) totTime) * 22.369; //calculate the velocity in MPH
+    //output the desired measurements
+    Serial.println("HIT!!");
+    Serial.println();
+    Serial.print("VELOCITY: ");
+    Serial.print(velo);
+    Serial.println(" mph");
+    delay(1000);
+  }
+  hit = false; //reset the hit counter
+  countShock = 0; //reset the impact counter 
+}
+```
+
+The following is code for the accuracy sensor:
+
+```c
+const int button1 = 4; //definining the four buttons and 
+const int button2 = 5;//four LEDS corresponding to
+const int button3 = 6;//the four zones
+const int button4 = 7;
+const int led1 = 10;
+const int led2 = 11;
+const int led3 = 12;
+const int led4 = 13;
+ 
+void setup(){
+  Serial.begin(9600);
+  pinMode(button1, INPUT_PULLUP);
+  pinMode(button2, INPUT_PULLUP);
+  pinMode(button3, INPUT_PULLUP);
+  pinMode(button4, INPUT_PULLUP);
+  pinMode(led1, OUTPUT);
+  pinMode(led2, OUTPUT);
+  pinMode(led3, OUTPUT);
+  pinMode(led4, OUTPUT);
+}
+float hitcount = 0; //strike counter
+float counter = 0; //total pitches counter
+
+void loop(){
+volatile int x = random(10,14); //LEDpin
+volatile int y = x - 6; //button pin
+digitalWrite(x, HIGH);
+  while(1<2){
+    if((digitalRead(x) == HIGH)&&(digitalRead(y) == LOW)){
+      counter++; //if strike, add to strike counter and total counter
+      hitcount++;
+      digitalWrite(x, LOW); //write pin low
+      float successRate = (hitcount/counter); //print success rate
+      Serial.println("Strike!");
+      Serial.print("Success Rate: ");
+      Serial.println(successRate);
+      delay(1000);
+      break;
+    }
+    else if((y != 4) && (digitalRead(4) == LOW)){
+      counter++; //else if a ball,  just add to total pitches
+      digitalWrite(4, HIGH); //turn button/sensor back to high to prevent button bouncing issues
+      digitalWrite(x, LOW); //if you miss, still turn off correct LED and go to next one
+      float successRate = (hitcount/counter);
+      Serial.println("Ball!");
+      Serial.print("Success Rate: ");
+      Serial.println(successRate);
+      break;
+    }
+    else if((y != 5) && (digitalRead(5) == LOW)){
+      counter++; //repeat as above for other buttons if mispress/mispitch
+      digitalWrite(5, HIGH);
+      digitalWrite(x, LOW);
+      float successRate = (hitcount/counter);
+      Serial.println("Ball!");
+      Serial.print("Success Rate: ");
+      Serial.println(successRate);
+      break;
+    }
+    else if((y != 6) && (digitalRead(6) == LOW)){
+      counter++;
+      digitalWrite(6, HIGH);
+      digitalWrite(x, LOW);
+      float successRate = (hitcount/counter);
+      Serial.println("Ball!");
+      Serial.print("Success Rate: ");
+      Serial.println(successRate);
+      break;
+    }
+    else if((y != 7) && (digitalRead(7) == LOW)){
+      counter++;
+      digitalWrite(7, HIGH);
+      digitalWrite(x, LOW);
+      float successRate = (hitcount/counter);
+      Serial.println("Ball!");
+      Serial.print("Success Rate: ");
+      Serial.println(successRate);
+      break;
+    } 
+  }
+  
+  volatile int g = random(10,14); //repeating the same thing
+  volatile int h = g-6;
+  delay(1000);
+  digitalWrite(g, HIGH);
+  while(1<2){
+    if((digitalRead(g) == HIGH)&&(digitalRead(h) == LOW)){
+      counter++;
+      hitcount++;
+      digitalWrite(g, LOW);
+      float successRate = (hitcount/counter);
+      Serial.println("Strike!");
+      Serial.print("Success Rate: ");
+      Serial.println(successRate);
+      delay(1000);
+      break;
+    }
+    else if((h != 4) && (digitalRead(4) == LOW)){
+      counter++;
+      digitalWrite(4, HIGH);
+      digitalWrite(g, LOW);
+      float successRate = (hitcount/counter);
+      Serial.println("Ball!");
+      Serial.print("Success Rate: ");
+      Serial.println(successRate);
+      break;
+    }
+    else if((h != 5) && (digitalRead(5) == LOW)){
+      counter++;
+      digitalWrite(5, HIGH);
+      digitalWrite(g, LOW);
+      float successRate = (hitcount/counter);
+      Serial.println("Ball!");
+      Serial.print("Success Rate: ");
+      Serial.println(successRate);
+      break;
+    }
+    else if((h != 6) && (digitalRead(6) == LOW)){
+      counter++;
+      digitalWrite(6, HIGH);
+      digitalWrite(g, LOW);
+      float successRate = (hitcount/counter);
+      Serial.println("Ball!");
+      Serial.print("Success Rate: ");
+      Serial.println(successRate);
+      break;
+    }
+    else if((h != 7) && (digitalRead(7) == LOW)){
+      counter++;
+      digitalWrite(7, HIGH);
+      digitalWrite(g, LOW);
+      float successRate = (hitcount/counter);
+      Serial.println("Ball!");
+      Serial.print("Success Rate: ");
+      Serial.println(successRate);
+      break;
+    }
+  }
+}
+```
+
+
+[Back to Projects](/#projects)
