@@ -170,6 +170,7 @@ I created this site both as a way to showcase the work I've done over the years 
 
 --- 
 ## Projects
+Click on each any project link that interests you to learn more!
 
 <ul>
   {% for post in site.posts %}
