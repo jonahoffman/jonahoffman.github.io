@@ -19,14 +19,13 @@ I created this site both as a way to showcase the work I've done over the years 
         Baltimore, MD
     </span>
 </p>
-
 <p style="text-align:left; margin: 0, padding-top: 0; margin-bottom: 0;">
     M.S Engineering Management, Concentration in Mechanical Engineering
     <span style="float:right; margin-bottom: 0">
         Expected Spring 2022
     </span>
 </p>
-
+<p></p>
 <p style="text-align:left; margin-bottom: 0;">
     <b>Johns Hopkins University</b>, Whiting School of Engineering
     <span style="float:right;margin-bottom: 0">
