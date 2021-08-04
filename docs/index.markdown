@@ -103,8 +103,8 @@ I created this site both as a way to showcase the work I've done over the years 
     </span>
 </p>
 
-• Teaching assistant for Design and Analysis of Dynamical Systems (Spring 2021) and Manufacturing Engineering (Fall 2020/Spring 2021) courses 
-• Advised DADS students on their final projects, providing guidance and advice in individual meetings and over email 
+• Teaching assistant for Design and Analysis of Dynamical Systems (Spring 2021) and Manufacturing Engineering (Fall 2020/Spring 2021) courses   
+• Advised DADS students on their final projects, providing guidance and advice in individual meetings and over email   
 • Responsible for all homework and quiz grading, as well as data entry and management of Blackboard system
 
 <p style="text-align:left; margin-bottom: 0;">
