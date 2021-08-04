@@ -10,7 +10,7 @@ title: Welcome!
 
 My name is **Jonah Offman**, and I am a graduate student at **Johns Hopkins University** getting my **M.S. in Engineering Management**, concentrating in **Mechanical Engineering**. I graduated in Spring 2021 from JHU with a **B.S. in Mechanical Engineering**  and a minor in French. I'm also currently a right handed pitcher and 2-year captain of the Johns Hopkins varsity baseball team, teaching assistant, and member of the Sports Analytics Club. I'm passionate about **mechanical design**, **robotics and control systems**, **renewable energy**,and the **interactions between software and hardware**. 
 
-I created this site both as a way to showcase the work I've done over the years and as an (ongoing) coding exercise, as I am slightly obsessed with growing my coding abilities. Feel free to navigate the sidebar to check out my [full resume](/resume/) and see more detail about my past experiences and projects, or stick around on the homepage to get a quick overview. 
+I created this site both as a way to showcase the work I've done over the years and as an (ongoing) coding exercise, as I always enjoy looking to build new and existing software skills. Feel free to navigate the sidebar to check out my [full resume](/resume/) and see more detail about my past experiences and projects, or stick around on the homepage to get a quick overview. 
 ## Education 
 ---
 <p style="text-align:left; margin-bottom: 0;">
