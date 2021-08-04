@@ -8,7 +8,7 @@ title: Welcome!
 
 **Nice to meet you!**  
 
-My name is **Jonah Offman**, and I am a senior at **Johns Hopkins University** majoring in **Mechanical Engineering** and minoring in French. I'm also currently a right handed pitcher and captain of the Johns Hopkins varsity baseball team, teaching assistant, and member of the Sports Analytics Club. I'm passionate about **mechanical design**, **robotics and control systems**, **renewable energy**,and the **interactions between software and hardware**. 
+My name is **Jonah Offman**, and I am a graduate student at **Johns Hopkins University** getting my **M.S. in Engineering Management**, concentrating in **Mechanical Engineering**. I graduated in Spring 2021 from JHU with a **B.S. in Mechanical Engineering**  and a minor in French. I'm also currently a right handed pitcher and 2-year captain of the Johns Hopkins varsity baseball team, teaching assistant, and member of the Sports Analytics Club. I'm passionate about **mechanical design**, **robotics and control systems**, **renewable energy**,and the **interactions between software and hardware**. 
 
 I created this site both as a way to showcase the work I've done over the years and as an (ongoing) coding exercise, as I am slightly obsessed with growing my coding abilities. Feel free to navigate the sidebar to check out my [full resume](/resume/) and see more detail about my past experiences and projects, or stick around on the homepage to get a quick overview. 
 ## Education 
@@ -20,13 +20,26 @@ I created this site both as a way to showcase the work I've done over the years 
     </span>
 </p>
 <p style="text-align:left; margin: 0, padding-top: 0; margin-bottom: 0;">
+    M.S Engineering Management, Concentration in Mechanical Engineering
+    <span style="float:right; margin-bottom: 0">
+        Expected Spring 2022
+    </span>
+</p>
+
+<p style="text-align:left; margin-bottom: 0;">
+    <b>Johns Hopkins University</b>, Whiting School of Engineering
+    <span style="float:right;margin-bottom: 0">
+        Baltimore, MD
+    </span>
+</p>
+<p style="text-align:left; margin: 0, padding-top: 0; margin-bottom: 0;">
     B.S Mechanical Engineering, Minor in French
     <span style="float:right; margin-bottom: 0">
-        Expected Spring 2021
+        Spring 2021
     </span>
 </p>
 <p style="text-align:left; margin: 0, padding-top: 0;">
-    <b>GPA:</b> 3.84
+    <b>Undergrad GPA:</b> 3.86
 </p>
 
 **Coursework:**   
@@ -54,7 +67,7 @@ I created this site both as a way to showcase the work I've done over the years 
 <p style="text-align:left; margin: 0, padding-top: 0; margin-bottom: 0;">
     <i>Design Engineer</i>
     <span style="float:right; margin-bottom: 0">
-        August 2020-Present
+        August 2020 - May 2021
     </span>
 </p>
 
@@ -74,7 +87,8 @@ I created this site both as a way to showcase the work I've done over the years 
     </span>
 </p>
 
-• Teaching assistant for the Fall 2020 Manufacturing Engineering course  
+• Teaching assistant for Design and Analysis of Dynamical Systems (Spring 2021) and Manufacturing Engineering (Fall 2020/Spring 2021) courses 
+• Advised DADS students on their final projects, providing guidance and advice in individual meetings and over email 
 • Responsible for all homework and quiz grading, as well as data entry and management of Blackboard system
 
 <p style="text-align:left; margin-bottom: 0;">
@@ -162,6 +176,8 @@ I created this site both as a way to showcase the work I've done over the years 
 
 ## Skills 
 • Fluent in **French**  
+• Experience with Atlassian workflow software (Jira, Confluence, Trello, BitBucket)
+• Experience with version control using Git
 • Skilled in **CAD** (experience in CREO and SolidWorks)    
 • Experience with engineering software such as **ANSYS**, **LabView**, and **CNC**    
 • **Manufacturing** and **machining** processes (3D Printing, Laser Cutting, Wire EDM, Lathe, Mill, etc.)    
