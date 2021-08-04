@@ -21,14 +21,14 @@
 title: Jonah Offman
 # email: joffman1@jhu.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Hello! I am currently a senior at Johns Hopkins University in Baltimore, MD.
-  I am studying Mechanical Engineering and created this site to showcase my 
+  Hello! I am currently a graduate student at Johns Hopkins University in Baltimore, MD.
+  I am studying Engineering Management (after my undergrad in MechE) and created this site to showcase my 
   experiences, projects, skills, and interests. Thanks for stopping by!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll
-logo:  /assets/headshotsq.jpg
+logo:  /assets/newheadshot.jpg
 accent_image: /assets/gearsdark.jpg
 accent_color: rgb(0,45,114)
 author: 

@@ -50,14 +50,30 @@ I created this site both as a way to showcase the work I've done over the years 
 
 **Awards and Honors:**  
 - Pi Tau Sigma Mechanical Engineering Honor Society
+- William N. Sharpe Jr. Award Recipient
 - Charles C. Diggs Scholarship Recipient
-- Dean’s List (Fall 2017 - Spring 2019)
+- Dean’s List (Fall 2017 - Spring 2021)
 - 2020 CoSIDA Academic All-District Team (Baseball)
-- Centennial Conference Academic Honor Roll (2019 - 2020)  
+- Centennial Conference Academic Honor Roll (2019 - 2021)  
 
 ---
 ## Experiences  
 ---
+<p style="text-align:left; margin-bottom: 0;">
+    <b>Johnson & Johnson, Robotics and Digital Solutions</b>
+    <span style="float:right;margin-bottom: 0">
+        Redwood City, CA
+    </span>
+</p>
+<p style="text-align:left; margin: 0, padding-top: 0; margin-bottom: 0;">
+    <i>Robotics Software Engineering Intern</i>
+    <span style="float:right; margin-bottom: 0">
+        May 2021 - Present
+    </span>
+</p>
+• Developed a Python package based on existing C++ kinematics framework in order to speed up and simplify the testing and prototyping processes for members of the Software for Robotics Control (SRC) team
+• Created a Python library using a B0-based Remote API to read in joint configurations and end-effector poses from .csv files in order to visualize robot motion and position in the CoppeliaSim robotics simulation software
+
 <p style="text-align:left; margin-bottom: 0;">
     <b>Johns Hopkins Center for Neuroplastic Surgery Research</b>
     <span style="float:right;margin-bottom: 0">
