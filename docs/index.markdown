@@ -71,7 +71,7 @@ I created this site both as a way to showcase the work I've done over the years 
         May 2021 - Present
     </span>
 </p>
-• Developed a Python package based on existing C++ kinematics framework in order to speed up and simplify the testing and prototyping processes for members of the Software for Robotics Control (SRC) team
+• Developed a Python package based on existing C++ kinematics framework in order to speed up and simplify the testing and prototyping processes for members of the Software for Robotics Control (SRC) team  
 • Created a Python library using a B0-based Remote API to read in joint configurations and end-effector poses from .csv files in order to visualize robot motion and position in the CoppeliaSim robotics simulation software
 
 <p style="text-align:left; margin-bottom: 0;">
