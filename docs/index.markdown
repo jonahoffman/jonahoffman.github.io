@@ -73,6 +73,7 @@ I created this site both as a way to showcase the work I've done over the years 
 </p>
 • Developed a Python package based on existing C++ kinematics framework in order to speed up and simplify the testing and prototyping processes for members of the Software for Robotics Control (SRC) team  
 • Created a Python library using a B0-based Remote API to read in joint configurations and end-effector poses from .csv files in order to visualize robot motion and position in the CoppeliaSim robotics simulation software
+• Implemented a joint torque gravity effort model for a serial manipulator and compared system telemetry data logs with the model outputs to check for sensor error or miscalibration
 
 <p style="text-align:left; margin-bottom: 0;">
     <b>Johns Hopkins Center for Neuroplastic Surgery Research</b>
