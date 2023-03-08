@@ -46,6 +46,7 @@ As of March 2023, I am looking for a new role and would love to connect on [Link
 </p>
 
 **Coursework:**   
+*Robotics*: Robot System Programming (ROS / Linux), Algorithms for Sensor-Based Robotics, Robot Devices / Kinematics / Dynamics / Control, Mechatronics, Robotic Sensors and Actuators 
 
 *Engineering*: Mechanics, Dynamics, Statics, Mechanics Based Design, Fluid Mechanics, Thermodynamics, Materials Selection, Heat Transfer, Electronics and Instrumentation, Manufacturing Engineering, Dynamical Systems, Robotic Sensors and Actuators, Mechatronics, Introduction to Computer Aided Design
 
@@ -69,9 +70,19 @@ As of March 2023, I am looking for a new role and would love to connect on [Link
     </span>
 </p>
 <p style="text-align:left; margin: 0, padding-top: 0; margin-bottom: 0;">
+    <i>Robotics Software Engineer</i>
+    <span style="float:right; margin-bottom: 0">
+        July 2022 - Present
+    </span>
+</p>
+
+• Created a Python framework for the development and deployment of algorithms for both performance analysis and preventative maintenance, including comparing model and sensor gravity effort, determining arm workspace, and monitoring joint temperatures and torques 
+• Developed a data analysis tool using Databricks Delta Tables and PySpark to automatically run the analysis algorithms on over 3 years of telemetry data from the MONARCH platform in the field to easily determine and display key findings 
+
+<p style="text-align:left; margin: 0, padding-top: 0; margin-bottom: 0;">
     <i>Robotics Software Engineering Intern</i>
     <span style="float:right; margin-bottom: 0">
-        May 2021 - Present
+        May 2021 - July 2022
     </span>
 </p>
 • Developed a Python package based on existing C++ kinematics framework in order to speed up and simplify the testing and prototyping processes for members of the Software for Robotics Control (SRC) team  
@@ -195,14 +206,37 @@ As of March 2023, I am looking for a new role and would love to connect on [Link
 ---
 
 ## Skills 
-• Software development in `Python` and `MATLAB`
-• Fluent in **French**  
-• Experience with Atlassian workflow software (Jira, Confluence, Trello, BitBucket)
-• Experience with version control using Git
+Version control using Git
+Mechanical Engineering:
+Computer-Aided Design in SolidWorks and CREO
+Manufacturing and machining processes
+Design thinking
+Technical drawing using GD&T
+Additional / Soft Skills:
+Fluent in French
+Collaboration
+Communication
+Problem-solving
+Time management
+Leadership
+
+### Software Engineering Skills
+• Software development in `Python`, `MATLAB`, and `C++`
+• Data Analysis with Databricks, PySpark, Pandas, and SQL
+• Experience with Atlassian Agile workflow software (Jira, Confluence, Trello, BitBucket)
+• Version control using Git
+### Mechanical Engineering Skills
 • Skilled in **CAD** (experience in CREO and SolidWorks)    
 • Experience with engineering software such as **ANSYS**, **LabView**, and **CNC**    
-• **Manufacturing** and **machining** processes (3D Printing, Laser Cutting, Wire EDM, Lathe, Mill, etc.)       
-• Excellent with **Microsoft Office** and **G suite**    
+• **Manufacturing** and **machining** processes (3D Printing, Laser Cutting, Wire EDM, Lathe, Mill, etc.) 
+### Additional / Soft Skills      
+• Excellent with **Microsoft Office** and **G suite**
+• Fluent in **French**
+• Collaboration
+• Communication
+• Problem-solving
+• Time management
+• Leadership    
 
 --- 
 ## Projects
