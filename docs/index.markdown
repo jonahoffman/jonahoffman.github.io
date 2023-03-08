@@ -8,9 +8,12 @@ title: Welcome!
 
 **Nice to meet you!**  
 
-My name is **Jonah Offman**, and I am a graduate student at **Johns Hopkins University** getting my **M.S. in Engineering Management**, concentrating in **Mechanical Engineering**. I graduated in Spring 2021 from JHU with a **B.S. in Mechanical Engineering**  and a minor in French. I'm also currently a right handed pitcher and 2-year captain of the Johns Hopkins varsity baseball team, teaching assistant, and member of the Sports Analytics Club. I'm passionate about **mechanical design**, **robotics and control systems**, **renewable energy**,and the **interactions between software and hardware**. 
+My name is **Jonah Offman**, and I am a robotics software engineer living and working in the San Francisco Bay Area. I graduated this past spring from **Johns Hopkins University** with my **M.S. in Engineering Management**, concentrating in **Mechanical Engineering**. Going further back, I previously graduated in Spring 2021 from JHU with a **B.S. in Mechanical Engineering**  and a minor in **French**. During my time at JHU, I was right handed pitcher and 2-year captain of the varsity baseball team, teaching assistant, and member of the Sports Analytics Club. I'm passionate about **mechanical design**, **robotics and control systems**, **renewable energy**,and the **interactions between software and hardware**. 
 
-I created this site both as a way to showcase the work I've done over the years and as an (ongoing) coding exercise, as I always enjoy looking to build new and existing software skills. Feel free to navigate the sidebar to check out my [full resume](/resume/) and see more detail about my past experiences and projects, or stick around on the homepage to get a quick overview. 
+I created this site both as a way to showcase the work I've done over the years and as an (ongoing) coding exercise, as I always enjoy looking to build new and existing software skills. Feel free to navigate the sidebar to check out my [full resume](/resume/) and see more detail about my past experiences and projects, or stick around on the homepage to get a quick overview.
+
+As of March 2023, I am looking for a new role and would love to connect on [LinkedIn](https://www.linkedin.com/in/jonah-offman/) to discuss new opportunities!
+
 ## Education 
 ---
 <p style="text-align:left; margin-bottom: 0;">
@@ -22,7 +25,7 @@ I created this site both as a way to showcase the work I've done over the years 
 <p style="text-align:left; margin: 0, padding-top: 0; margin-bottom: 0;">
     M.S Engineering Management, Concentration in Mechanical Engineering
     <span style="float:right; margin-bottom: 0">
-        Expected Spring 2022
+        Spring 2022
     </span>
 </p>
 <p></p>
@@ -192,13 +195,13 @@ I created this site both as a way to showcase the work I've done over the years 
 ---
 
 ## Skills 
+• Software development in `Python` and `MATLAB`
 • Fluent in **French**  
 • Experience with Atlassian workflow software (Jira, Confluence, Trello, BitBucket)
 • Experience with version control using Git
 • Skilled in **CAD** (experience in CREO and SolidWorks)    
 • Experience with engineering software such as **ANSYS**, **LabView**, and **CNC**    
-• **Manufacturing** and **machining** processes (3D Printing, Laser Cutting, Wire EDM, Lathe, Mill, etc.)    
-• Proficient in `MATLAB` and `Python`    
+• **Manufacturing** and **machining** processes (3D Printing, Laser Cutting, Wire EDM, Lathe, Mill, etc.)       
 • Excellent with **Microsoft Office** and **G suite**    
 
 --- 
