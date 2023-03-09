@@ -206,37 +206,24 @@ As of March 2023, I am looking for a new role and would love to connect on [Link
 ---
 
 ## Skills 
-Version control using Git
-Mechanical Engineering:
-Computer-Aided Design in SolidWorks and CREO
-Manufacturing and machining processes
-Design thinking
-Technical drawing using GD&T
-Additional / Soft Skills:
-Fluent in French
-Collaboration
-Communication
-Problem-solving
-Time management
-Leadership
 
 ### Software Engineering Skills
-• Software development in `Python`, `MATLAB`, and `C++`
-• Data Analysis with Databricks, PySpark, Pandas, and SQL
-• Experience with Atlassian Agile workflow software (Jira, Confluence, Trello, BitBucket)
-• Version control using Git
+• Software development in `Python`, `MATLAB`, and `C++`  
+• Data Analysis with Databricks, PySpark, Pandas, and SQL  
+• Experience with Atlassian Agile workflow software (Jira, Confluence, Trello, BitBucket)  
+• Version control using Git  
 ### Mechanical Engineering Skills
-• Skilled in **CAD** (experience in CREO and SolidWorks)    
-• Experience with engineering software such as **ANSYS**, **LabView**, and **CNC**    
-• **Manufacturing** and **machining** processes (3D Printing, Laser Cutting, Wire EDM, Lathe, Mill, etc.) 
+• Skilled in **CAD** (experience in CREO and SolidWorks)      
+• Experience with engineering software such as **ANSYS**, **LabView**, and **CNC**     
+• **Manufacturing** and **machining** processes (3D Printing, Laser Cutting, Wire EDM, Lathe, Mill, etc.)   
 ### Additional / Soft Skills      
-• Excellent with **Microsoft Office** and **G suite**
-• Fluent in **French**
-• Collaboration
-• Communication
-• Problem-solving
-• Time management
-• Leadership    
+• Excellent with **Microsoft Office** and **G suite**  
+• Fluent in **French**  
+• Collaboration  
+• Communication  
+• Problem-solving  
+• Time management  
+• Leadership      
 
 --- 
 ## Projects
