@@ -78,7 +78,7 @@ As of July 2023, I am working as a Strategy & Operations Associate at [Forward](
     </span>
 </p>
 
-• Created a Python framework for the development and deployment of algorithms for both performance analysis and preventative maintenance, including comparing model and sensor gravity effort, determining arm workspace, and monitoring joint temperatures and torques 
+• Created a Python framework for the development and deployment of algorithms for both performance analysis and preventative maintenance, including comparing model and sensor gravity effort, determining arm workspace, and monitoring joint temperatures and torques  
 • Developed a data analysis tool using Databricks Delta Tables and PySpark to automatically run the analysis algorithms on over 3 years of telemetry data from the MONARCH platform in the field to easily determine and display key findings 
 
 <p style="text-align:left; margin: 0, padding-top: 0; margin-bottom: 0;">
