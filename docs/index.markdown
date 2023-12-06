@@ -8,11 +8,13 @@ title: Welcome!
 
 **Nice to meet you!**  
 
-My name is **Jonah Offman**, and I am a robotics software engineer living and working in the San Francisco Bay Area. I graduated this past spring from **Johns Hopkins University** with my **M.S. in Engineering Management**, concentrating in **Mechanical Engineering**. Going further back, I previously graduated in Spring 2021 from JHU with a **B.S. in Mechanical Engineering**  and a minor in **French**. During my time at JHU, I was right handed pitcher and 2-year captain of the varsity baseball team, teaching assistant, and member of the Sports Analytics Club. I'm passionate about **mechanical design**, **robotics and control systems**, **renewable energy**,and the **interactions between software and hardware**. 
+My name is **Jonah Offman**, and I am a mechanical engineer living and working in the San Francisco Bay Area. As of July 2023, I am working as a Strategy & Operations Associate at [Forward](goforward.com), where I'm part of an incredible team striving to build the next generation of healthcare. I would love to connect on [LinkedIn](https://www.linkedin.com/in/jonah-offman/)!
+
+Before that, I graduated in 2022 from **Johns Hopkins University** with my **M.S. in Engineering Management**, concentrating in **Mechanical Engineering**. I previously graduated in Spring 2021 from JHU with a **B.S. in Mechanical Engineering** and a minor in **French**. During my time at JHU, I was a right handed pitcher and 2-year captain of the varsity baseball team, teaching assistant, and member of the Sports Analytics Club. I'm passionate about **mechanical design**, **robotics and control systems**, **renewable energy**,and the **interactions between software and hardware**. 
 
 I created this site both as a way to showcase the work I've done over the years and as an (ongoing) coding exercise, as I always enjoy looking to build new and existing software skills. Feel free to navigate the sidebar to check out my [full resume](/resume/) and see more detail about my past experiences and projects, or stick around on the homepage to get a quick overview.
 
-As of March 2023, I am looking for a new role and would love to connect on [LinkedIn](https://www.linkedin.com/in/jonah-offman/) to discuss new opportunities!
+As of July 2023, I am working as a Strategy & Operations Associate at [Forward](goforward.com), where I'm working on building the next generation of healthcare. I would love to connect on [LinkedIn](https://www.linkedin.com/in/jonah-offman/)!
 
 ## Education 
 ---
