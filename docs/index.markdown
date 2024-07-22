@@ -10,11 +10,9 @@ title: Welcome!
 
 My name is **Jonah Offman**, and I am a mechanical engineer living and working in the San Francisco Bay Area. As of July 2023, I am working as a Strategy & Operations Associate at [Forward](goforward.com), where I'm part of an incredible team striving to build the next generation of healthcare. I would love to connect on [LinkedIn](https://www.linkedin.com/in/jonah-offman/)!
 
-Before that, I graduated in 2022 from **Johns Hopkins University** with my **M.S. in Engineering Management**, concentrating in **Mechanical Engineering**. I previously graduated in Spring 2021 from JHU with a **B.S. in Mechanical Engineering** and a minor in **French**. During my time at JHU, I was a right handed pitcher and 2-year captain of the varsity baseball team, teaching assistant, and member of the Sports Analytics Club. I'm passionate about **mechanical design**, **robotics and control systems**, **renewable energy**,and the **interactions between software and hardware**. 
+Before that, I gained a  **M.S. in Engineering Management**, concentrating in **Mechanical Engineering** and a **B.S. in Mechanical Engineering** with a minor in **French** from **Johns Hopkins University**. During my time at JHU, I was a right handed pitcher and 2-year captain of the varsity baseball team, teaching assistant, and member of the Sports Analytics Club. I'm passionate about **mechanical design**, **robotics and control systems**, **renewable energy**,and the **interactions between software and hardware**. 
 
 I created this site both as a way to showcase the work I've done over the years and as an (ongoing) coding exercise, as I always enjoy looking to build new and existing software skills. Feel free to navigate the sidebar to check out my [full resume](/resume/) and see more detail about my past experiences and projects, or stick around on the homepage to get a quick overview.
-
-As of July 2023, I am working as a Strategy & Operations Associate at [Forward](goforward.com), where I'm working on building the next generation of healthcare. I would love to connect on [LinkedIn](https://www.linkedin.com/in/jonah-offman/)!
 
 ## Education 
 ---
@@ -66,6 +64,21 @@ As of July 2023, I am working as a Strategy & Operations Associate at [Forward](
 ## Experiences  
 ---
 <p style="text-align:left; margin-bottom: 0;">
+    <b>Forward</b>
+    <span style="float:right;margin-bottom: 0">
+        San Francisco, CA
+    </span>
+</p>
+<p style="text-align:left; margin: 0, padding-top: 0; margin-bottom: 0;">
+    <i>R&D Operations</i>
+    <span style="float:right; margin-bottom: 0">
+        July 2023 - Present
+    </span>
+</p>
+
+• Working on anything and everything needed to deploy a [CarePod](https://goforward.com/carepod) near you!
+
+<p style="text-align:left; margin-bottom: 0;">
     <b>Johnson & Johnson, Robotics and Digital Solutions</b>
     <span style="float:right;margin-bottom: 0">
         Redwood City, CA
@@ -74,7 +87,7 @@ As of July 2023, I am working as a Strategy & Operations Associate at [Forward](
 <p style="text-align:left; margin: 0, padding-top: 0; margin-bottom: 0;">
     <i>Robotics Software Engineer</i>
     <span style="float:right; margin-bottom: 0">
-        July 2022 - Present
+        July 2022 - July 2023
     </span>
 </p>
 
